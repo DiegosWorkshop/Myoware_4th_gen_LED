@@ -1,0 +1,31 @@
+const int iSensorPin = A3;            
+const int iMinThreshVal = 350;       
+int LED (9); 
+
+
+void setup() 
+{ 
+ pinMode(LED, OUTPUT);
+} 
+
+void loop() 
+{ 
+ 
+  int iSensorVal = analogRead(iSensorPin);
+
+
+  if(iSensorVal < iMinThreshVal)        
+  { 
+    digitalWrite(LED, HIGH);
+  }
+  
+  else 
+  { 
+     digitalWrite(LED, LOW);
+  } 
+
+  
+  delay(100);
+}
+
+
